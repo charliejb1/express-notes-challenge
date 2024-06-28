@@ -8,7 +8,7 @@ notes.get('/', (req, res) => {
 });
 
 notes.post('/', (req, res) => {
-  console.log(req.body);             
+  console.log(req.body);
 
   const { title, text, } = req.body;
 
@@ -16,7 +16,7 @@ notes.post('/', (req, res) => {
     const newNote = {
       title,
       text,
-      note_id: uuidv4(),
+      id: uuidv4(),
     };
 
     readAndAppend(newNote, './db/db.json');
@@ -25,5 +25,22 @@ notes.post('/', (req, res) => {
     res.error('Error in adding note');
   }
 });
+
+notes.delete('/:id', (req, res) => {
+  const noteToDelete = req.params.id;
+ console.log('noteToDelete', noteToDelete)
+  readFromFile('./db/db.json')
+    .then((data) => JSON.parse(data))
+    .then((notes) => {
+
+      const result = notes.filter((note) => note.id !== noteToDelete);
+      console.log('result',result)
+      writeToFile('./db/db.json', result);
+
+      res.json(`Note with id ${noteToDelete} deleted successfully`);
+    })
+})
+
+
 
 module.exports = notes;
