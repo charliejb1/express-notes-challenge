@@ -31,4 +31,18 @@ All of these files work together to display the webpage and allow the user to wr
   Github Profile Link: https://github.com/charliejb1
   
   Email: charlieboyle252@gmail.com
+
+ ## Screenshots
+ 
+Adding Notes
+![Screenshot 2024-06-28 at 3 32 57 PM](https://github.com/charliejb1/express-notes-challenge/assets/159658511/d50468ca-0712-4803-a33a-69461825a7a9)
+
+After Saved Note
+![Screenshot 2024-06-28 at 3 33 21 PM](https://github.com/charliejb1/express-notes-challenge/assets/159658511/45340f38-8e0f-467d-8ee9-e3107a1097f2)
+
+After Deleted Note
+![Screenshot 2024-06-28 at 3 36 00 PM](https://github.com/charliejb1/express-notes-challenge/assets/159658511/de4d1c40-851e-4d32-8113-37cf8d04f2e1)
+
+  
+  
   
